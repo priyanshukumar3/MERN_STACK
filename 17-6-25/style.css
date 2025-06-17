@@ -1,0 +1,205 @@
+/* * {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    border: 5px solid black;
+    width: 90vh;
+    height: 350vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
+    background-color: yellow;
+    z-index: 1;
+}
+
+.box2 {
+    background-color: rgba(108, 108, 175, 0.841);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 2px solid red;
+
+}
+.box3 {
+    background-color: rgb(30, 220, 220);
+    border: 2px solid black;
+    /* position: relative; */
+    /* top: 0px; */
+    /* right: 100px; */
+    /* z-index: 2;
+}
+
+@media screen and (max-width: 450px) {
+    .box1{
+        background-color: aliceblue;
+    }
+}
+
+@media screen and (max-width: 960px) and (orientation: landscape) {
+    .box2{
+        background-color: rgb(173, 63, 63);
+    }
+} */ */
+
+
+
+/*  Teacher code */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  display: flex;
+  height: 90vh;
+  width: 90vw;
+  left: 100px;
+  overflow: scroll;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  /* bottom: -100vh;
+  position: relative; */
+  background-color: yellow;
+  border: 1px solid red;
+}
+
+/* .box2 {
+  background-color: blue;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+} */
+
+/* .box2 {
+  background-color: blue;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+} */
+
+/* .box2 {
+  background-color: blue;
+  position: sticky;
+  top: 500px;
+  right: 0px;
+} */
+
+.box2 {
+  background-color: blue;
+  position: absolute;
+  z-index: 10;
+}
+
+.box3 {
+  z-index: 11;
+}
+
+@media screen and (max-width: 1281px) and (orientation: landscape) {
+  .box {
+    background-color: brown;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .box {
+    background-color: green;
+  }
+}
+
+
+/* 
+            for interview :-
+             1. responsiveness
+             2. media query
+
+
+            
+
+-----------------------------Desktop view first --------------
+
+@media screen and (max-width: 1281px) {
+  .box {
+    background-color: green;
+  }
+}
+
+@media screen and (max-width: 1081px) {
+  .box {
+    background-color: green;
+  }
+}
+
+@media screen and (max-width: 961px) {
+  .box {
+    background-color: green;
+  }
+}
+
+@media screen and (max-width: 611px) {
+  .box {
+    background-color: green;
+  }
+}
+
+
+
+-----------------------------Mobile view first --------------
+@media screen and (max-width: 641px) {
+  .box {
+    background-color: green;
+  }
+}
+
+@media screen and (max-width: 961px) {
+  .box {
+    background-color: green;
+  }
+}
+
+@media screen and (max-width: 1081px) {
+  .box {
+    background-color: green;
+  }
+}
+  
+@media screen and (max-width: 1281px) {
+  .box {
+    background-color: green;
+  }
+}
+
+
+
+
+
+
+
+
+
+*/
