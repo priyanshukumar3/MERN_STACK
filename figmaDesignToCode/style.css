@@ -1,0 +1,223 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f5ed;
+    color: #333;
+}
+
+.m {
+    width: 90vw;
+    margin: auto;
+}
+
+/* ========== NAVBAR ========== */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#search {
+    width: 180px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f8f5ed;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid rgb(254, 195, 0);
+    color: rgb(254, 195, 0);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgb(254, 195, 0);
+    color: white;
+}
+
+/* ========== HERO SECTION ========== */
+
+.f1 {
+    background-color: rgb(254, 195, 0);
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding-left: 6rem;
+    position: relative;
+}
+
+.f1a {
+    max-width: 600px;
+}
+
+.f1aa {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.f1ab {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.f1ac {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.f1ac > div {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.delivery,
+.pickup {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delivery {
+    background-color: rgb(255, 212, 181);
+    color: rgb(240, 81, 13);
+}
+
+.pickup {
+    background-color: white;
+    color: gray;
+    border: 1px solid lightgray;
+}
+
+#address {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+}
+
+.findfood {
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.findfood:hover {
+    background-color: darkorange;
+}
+
+/* ========== DEALS SECTION ========== */
+
+.f2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    background-color: white;
+}
+
+.f2 > div {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 220px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.img {
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.f2 > div > :last-child {
+    background-color: rgb(248, 208, 180);
+    color: rgb(255, 115, 0);
+    padding: 0.4rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+/* ========== HOW IT WORKS ========== */
+
+.f3 {
+    color: rgb(255, 136, 0);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+
+/* ========== STEPS SECTION ========== */
+
+.f4 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    background-color: #fffaf0;
+    text-align: center;
+    gap: 1rem;
+}
+
+.f4 > div {
+    width: 200px;
+}
+
+.f4 .img2 {
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* ========== POPULAR ITEMS TITLE ========== */
+
+p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 2rem 0;
+}
