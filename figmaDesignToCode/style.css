@@ -170,7 +170,10 @@ body {
     background-color: #ddd;
     border-radius: 6px;
     margin-bottom: 1rem;
+    overflow: hidden;
+    /* object-fit: cover; */
 }
+
 
 .f2 > div > :last-child {
     background-color: rgb(248, 208, 180);
