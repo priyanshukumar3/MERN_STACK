@@ -13,7 +13,7 @@ function changeTitle() {
 }
 
 
-function checkPass(password) {
+function checkPass(pass) {
     if(pass.length < 8) return false;
     let num = false;
     let cap = false;
@@ -78,10 +78,15 @@ function formValidate() {
     return;
   }
 
-  if (!checkText(password)) {
+  if (!checkText(pass)) {
     alert("Password not follows the rule!");
     return;
   }
+
+  // if(!checkPass(pass)) {
+  //    alert("Password not follows the rule!");
+  //   return;
+  // } 
 
   alert("Form Submitted Successfully!");
   return;
