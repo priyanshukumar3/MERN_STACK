@@ -9,7 +9,7 @@
   <body>
     <h1>DOM Practice</h1>
     <br />
-    <form>
+    <form class="form">
       <div>
         <label>First Name: </label>
         <input name="First Name" type="text" placeholder="FirstName" value="" />
@@ -31,7 +31,16 @@
       </div>
       <br />
     </form>
-    <button onclick="changeTitle()">Change Title</button>
+    <div class="clr">
+      <button onclick="changeColorRed()">Red</button>
+      <button onclick="changeColorPink()">Pink</button>
+      <button onclick="changeColorBrown()">Brown</button>
+      <button onclick="changeColorSky()">Sky</button>
+    </div>
+    <div>
+      <button onclick="toggle()">Toggle</button>
+      <button onclick="changeTitle()">Change Title</button>
+    </div>
     <button onclick="formValidate()">Form Validate</button>
 
     <script src="./script1.js"></script>
