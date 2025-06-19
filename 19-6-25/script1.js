@@ -12,21 +12,12 @@ function changeTitle() {
   const title = (document.querySelector("h1").innerText = "Student Form<");
 }
 
-function formValidate() {
-    const pass = document.getElementsByName("Password")[0].value;
-    const mail = document.getElementsByName("Email")[0].value;
 
-    console.log("Password: ", pass);
-    if(pass.length < 8) {
-        alert("Password must be more then 8 char");
-        return;
-    }
-
-    num = false;
-    cap = false;
-    ag = false;
-    avail = false;
-
+function checkPass(password) {
+    if(pass.length < 8) return false;
+    let num = false;
+    let cap = false;
+    let ag = false;
     for(let i=0; i<pass.length; i++) {
         if(pass[i] >= '1' && pass[i] <= '9') {
             num = true;
@@ -39,21 +30,59 @@ function formValidate() {
         }
     }
 
-    for(let i=0; i<mail.length; i++) {
-        if(mail[i] == '@') avail = true;
-    }
-    if(!ag) {
-        alert("There must be @ symbol");
-        return;
-    }
+    if(num && cap && ag) return true;
+    return false;
+}
 
-    if(avail && num && cap && ag) {
-        alert("All are correct !!!!")
-    }
-    else if(!avail) alert("There must @ in Email");
-    else if(!num) alert("There must be a Number");
-    else if(!cap) alert("There must be a char in upper case");
-    
+// function checkMail(mail) {
 
-    
+// }
+
+
+function checkText(text) {
+  let hasUpperCase = false,
+    hasNumber = false;
+  for (let i = 0; i < text.length; i++) {
+    if (isUpperCase(text[i])) hasUpperCase = true;
+    if (isNumber(text[i])) hasNumber = true;
+    if (hasUpperCase && hasNumber) return true;
+  }
+
+  return false;
+}
+
+function isUpperCase(char) {
+  if (char >= "A" && char <= "Z") return true;
+
+  return false;
+}
+
+function isNumber(num) {
+  if (Number(num) >= 0 && Number(num) <= 9) return true;
+  else false;
+}
+
+function formValidate() {
+  const firstName = document.getElementsByName("First Name")[0].value;
+  const lastName = document.getElementsByName("Last Name")[0].value;
+  const email = document.getElementsByName("Email")[0].value;
+  const pass = document.getElementsByName("Password")[0].value;
+
+  if (!firstName.length || !lastName.length || !email.length || !pass.length) {
+    alert("Some Fields are Empty!");
+    return;
+  }
+
+  if (!email.includes("@")) {
+    alert("Email is Invalid!");
+    return;
+  }
+
+  if (!checkText(password)) {
+    alert("Password not follows the rule!");
+    return;
+  }
+
+  alert("Form Submitted Successfully!");
+  return;
 }
