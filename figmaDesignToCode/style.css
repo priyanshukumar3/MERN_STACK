@@ -149,6 +149,7 @@ body {
 .f2 {
     display: flex;
     flex-wrap: wrap;
+    height: 400px;
     justify-content: center;
     gap: 2rem;
     padding: 2rem 1rem;
@@ -156,22 +157,24 @@ body {
 }
 
 .f2 > div {
-    background-color: #fff;
-    border: 1px solid #eee;
+    /* border: 1px solid black; */
     border-radius: 8px;
-    padding: 1rem;
     width: 220px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     text-align: center;
 }
 
-.img {
-    height: 150px;
-    background-color: #ddd;
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    /* object-fit: cover; */
+.container {
+    /* border-radius: 8px; */
+    /* border: 1px solid black; */
+    height: 70%;
+    width: 220px;
+}
+.container > img {
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    
 }
 
 
@@ -196,24 +199,17 @@ body {
 /* ========== STEPS SECTION ========== */
 
 .f4 {
+    height: 400px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 2rem 1rem;
-    background-color: #fffaf0;
     text-align: center;
     gap: 1rem;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 .f4 > div {
     width: 200px;
-}
-
-.f4 .img2 {
-    height: 100px;
-    background-color: #ddd;
-    border-radius: 6px;
-    margin-bottom: 1rem;
 }
 
 /* ========== POPULAR ITEMS TITLE ========== */
