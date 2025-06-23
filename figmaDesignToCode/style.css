@@ -577,10 +577,8 @@ f5::-webkit-scrollbar {
     height: 600px;
     background: rgb(37, 37, 37);
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     color: white;
-    /* align-items: center; */
 }
 .f12 footer {
     width: 70%;
@@ -643,6 +641,9 @@ footer hr {
     background: orange;
     box-shadow: 0px 0px 5px#ee9609;
     margin-left: 5px;
+}
+.bttn {
+    cursor: pointer;
 }
 
 
