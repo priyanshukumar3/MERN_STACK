@@ -145,8 +145,199 @@
 // console.log("Hello Sriram");
 
 
-for(let i=1; i<=5; i++) {
-    setTimeout(function () {
-        console.log(i);
-    }, i* 1000);
+// for(let i=1; i<=5; i++) {
+//     setTimeout(function () {
+//         console.log(i);
+//     }, i* 1000);
+// }
+
+
+
+// ----------------------------------------24 - 06 - 25----------------------------------------------
+
+
+
+//NOTE - Callbacks
+
+//Defination: A callback is a function which is passed as an argument inside a function.
+
+// function greet(name) {
+//   console.log(`Hello ${name}`);
+// }
+
+// function greetStudent(name, callback) {
+//   setTimeout(() => {
+//     callback(name);
+//   }, 1000);
+// }
+
+// greetStudent("Sriram", greet);
+
+//Grocery Cart
+
+// function createOrder(cb) {
+//   console.log("order creation");
+//   cb();
+// }
+
+// function payOrder(cb) {
+//   console.log("Payment Done..");
+//   cb();
+// }
+
+// function createOrderSummary() {
+//   console.log("Created Order Summary");
+// }
+
+// createOrder(() => payOrder(createOrderSummary));
+
+// Bad side of callback
+
+/*
+1. Callback Hell
+2. Inversion of control
+*/
+
+
+//Bad side of callback
+
+/*
+ 1. Callback Hell
+ 2. Inversion of control
+*/
+
+//NOTE - Callback Hell
+
+/*
+1. User Login
+2. Add items in cart
+3. Create Order
+4. Pay order
+5. Create Order summary
+6. Update wallet
+*/
+
+// function login(cb) {
+//   console.log("User Logged in");
+//   cb();
+// }
+
+// function addItemToCart(cb) {
+//   console.log("Added items to cart");
+//   cb();
+// }
+
+// function createOrder(cb) {
+//   console.log("order creation");
+//   cb();
+// }
+
+// function payOrder(cb) {
+//   console.log("Payment Done..");
+//   cb();
+// }
+
+// function createOrderSummary(cb) {
+//   console.log("Created Order Summary");
+//   cb();
+// }
+
+// function updateWallet() {
+//   console.log("Update wallet");
+// }
+
+// login(() => addItemToCart(() => createOrder(() => payOrder(() => createOrderSummary(updateWallet)))));
+
+
+
+
+// NODE - Promises
+
+// Defination
+// Promise is an object which shows eventual completion or failure of an asynchronous code
+// Promise is an placeholder which stores completion or failure state of a asynchronous call
+
+// function createOrder() {
+//     console.log("Order created successfully");
+// }
+
+// const promise = new Promise((resolve, reject) =>{
+//     setTimeout(() => {
+//         createOrder();
+//         resolve();
+//     }, 2000)
+// });
+
+// console.log(promise);
+
+
+//LINK - Callback hell via promise
+
+/*
+1. User Login
+2. Add items to cart
+3. Create Order
+4. Pay order
+5. Create Order summary
+6. Update wallet
+
+*/
+
+const login = () =>
+  new Promise((res, rej) => {
+    console.log("User Logged in");
+    res({name: "sriram"});
+  });
+
+const addItemToCart = () =>
+  new Promise((res, rej) => {
+    console.log("Added items to cart");
+    res();
+  });
+
+const createOrder = () =>
+  new Promise((res, rej) => {
+    console.log("Order creation");
+    res();
+  });
+
+const payOrder = () =>
+  new Promise((res, rej) => {
+    console.log("Payment Done..");
+    res();
+  });
+const createOrderSummary = () =>
+  new Promise((res, rej) => {
+    console.log("Created Order Summary");
+    res();
+  });
+
+function updateWallet() {
+  console.log("Update wallet");
 }
+
+//  with the help of this we can resolve the callback HELL
+
+login()
+  .then((data) => {
+    console.log(data);
+    addItemToCart()
+      .then(() => {
+        createOrder()
+          .then(() => {
+            payOrder()
+              .then(() => {
+                createOrderSummary()
+                  .then(() => {
+                    updateWallet();
+                  })
+                  .catch(() => console.error("Order summary failed!"));
+              })
+              .catch(() => console.error("Payment failed!"));
+          })
+          .catch(() => console.error("Create order failed!"));
+      })
+      .catch(() => console.error("Cart Items add failed!"));
+  })
+  .catch(() => console.error("user Login failed!"));
+
