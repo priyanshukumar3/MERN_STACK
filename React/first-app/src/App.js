@@ -82,6 +82,8 @@ import List from "./components/List";
 import Listner from "./components/Lifecycle/LIstner";
 import ClassComponent from "./components/Lifecycle/classComponent";
 import CounterWithHook from "./components/Lifecycle/CounterWithHook";
+import UserSearch from "./components/UserSearch";
+import TimerWithUseEffect from "./components/TimerWithUseEffect";
 
 
 function App() {
@@ -104,7 +106,9 @@ function App() {
 
       {/* <classComponent /> */}
       {/* <Listner /> */}
-      <CounterWithHook/>
+      {/* <CounterWithHook/> */}
+      {/* <UserSearch/> */}
+      <TimerWithUseEffect/>
 
     </div>
   );
