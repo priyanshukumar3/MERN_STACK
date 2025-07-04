@@ -23,6 +23,8 @@
 // }
 
 // export default App;
+
+
 //-----------------------------------------------------------------
 
 
@@ -84,6 +86,14 @@ import ClassComponent from "./components/Lifecycle/classComponent";
 import CounterWithHook from "./components/Lifecycle/CounterWithHook";
 import UserSearch from "./components/UserSearch";
 import TimerWithUseEffect from "./components/TimerWithUseEffect";
+import Stopwatch from "./components/Stopwatch";
+import Cheatingapp from "./components/Cheatingapp";
+import InternetConnection from "./components/internetConnection";
+import MemoComp from "./components/MemoComp";
+import ReduceCounter from "./components/store/ReduceCounter";
+import RedMultiCounter from "./components/store/RedMultiCounter";
+import MultiReducer from "./components/store/MultiReducer";
+import Parent from "./components/GlobalState/Parent";
 
 
 function App() {
@@ -108,8 +118,22 @@ function App() {
       {/* <Listner /> */}
       {/* <CounterWithHook/> */}
       {/* <UserSearch/> */}
-      <TimerWithUseEffect/>
 
+      {/* {is && <TimerWithUseEffect/>}
+      <button onClick={() => setIs((prev) => !prev)}>Update</button> */}
+
+      {/* <Stopwatch/> */}
+      {/* <Cheatingapp/> */}
+      {/* <InternetConnection/> */}
+      {/* <draft/> */}
+
+      {/* <MemoComp/> */}
+      {/* <button onClick={() => setIs((prev) => !prev)}>Render App.js</button> */}
+
+      {/* <ReduceCounter/> */}
+      {/* <RedMultiCounter/> */}
+      {/* <MultiReducer/> */}
+      <Parent/>
     </div>
   );
 }
