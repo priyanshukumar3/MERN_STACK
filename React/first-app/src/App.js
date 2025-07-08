@@ -93,7 +93,10 @@ import MemoComp from "./components/MemoComp";
 import ReduceCounter from "./components/store/ReduceCounter";
 import RedMultiCounter from "./components/store/RedMultiCounter";
 import MultiReducer from "./components/store/MultiReducer";
-import Parent from "./components/GlobalState/Parent";
+// import Parent from "./components/GlobalState/Parent";
+// import Counter from "./components/hooks/Parent"
+import moduleName from './components/hooks/Products'
+import Products from "./components/hooks/Products";
 
 
 function App() {
@@ -133,7 +136,12 @@ function App() {
       {/* <ReduceCounter/> */}
       {/* <RedMultiCounter/> */}
       {/* <MultiReducer/> */}
-      <Parent/>
+      {/* <Parent/> */}
+      {/* <Parent/> */}
+      {/* <Products/> */}
+
+
+      {/* <div>React Router App</div> */}
     </div>
   );
 }
