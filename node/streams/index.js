@@ -15,3 +15,9 @@ const writeStream = fs.createWriteStream("output.txt");
     
 // });
 
+const fs = require("fs");
+const zlib = require("zlib");
+const gzip = zlib.createGzip();
+fs.createReadStream("input.txt")
+    .pipe(gzip) // transform stream
+    .pipe(fs.createWriteStream("input.txt.gz"));
